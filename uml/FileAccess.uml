@@ -4,4 +4,43 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_1yNZYM1hEeiyqPFIwL1lZw" name="MainRun"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1WZy4M18EeiGG7dxLIRvtw" name="Application">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_AF_FkM1-EeiGG7dxLIRvtw" name="mSecurity" visibility="private" type="_3xYAgM18EeiGG7dxLIRvtw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JTKm0M1-EeiGG7dxLIRvtw" name="mFileSystem" visibility="private" type="_41vAgM18EeiGG7dxLIRvtw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MCODgM19EeiGG7dxLIRvtw" name="read_from_filesystem" isQuery="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UbolgM19EeiGG7dxLIRvtw" name="i_path">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eVY44M19EeiGG7dxLIRvtw" name="r_string" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_3xYAgM18EeiGG7dxLIRvtw" name="iSecurity">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_iCQzQM19EeiGG7dxLIRvtw" name="isAuthorized">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_o0pGAM19EeiGG7dxLIRvtw" name="i_user">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhPxwM19EeiGG7dxLIRvtw" name="i_path">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ubYsEM19EeiGG7dxLIRvtw" name="r_bool" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_41vAgM18EeiGG7dxLIRvtw" name="iFileSystem">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1kO-EM19EeiGG7dxLIRvtw" name="getFile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Twj0M19EeiGG7dxLIRvtw" name="iPath">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7eyQ8M19EeiGG7dxLIRvtw" name="r_File" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8KMa4M18EeiGG7dxLIRvtw" name="Security"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9WRMcM18EeiGG7dxLIRvtw" name="FileSystem"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_Cqe4EM19EeiGG7dxLIRvtw" client="_8KMa4M18EeiGG7dxLIRvtw" supplier="_3xYAgM18EeiGG7dxLIRvtw"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_Dfi30M19EeiGG7dxLIRvtw" client="_9WRMcM18EeiGG7dxLIRvtw" supplier="_41vAgM18EeiGG7dxLIRvtw"/>
 </uml:Model>
